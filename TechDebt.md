@@ -7,3 +7,7 @@
 ## 2. part
 
 - The board is an array and it shows by the console.table procedure. 
+
+## 3. part
+
+- It can check the empty positions

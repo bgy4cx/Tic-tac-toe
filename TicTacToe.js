@@ -6,6 +6,7 @@ function ShowTheBoard(board) {
     console.table(board);
 }
 
+// This function the positions of the free spaces. Odd vaule is row's number and the even vaule is the column's number.   
 function emptySpace(board) {
     output = [];
     for (let i = 0; i < 3; i++) {
