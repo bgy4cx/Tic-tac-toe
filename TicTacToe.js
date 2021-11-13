@@ -31,6 +31,7 @@ function checkTheWin(board) {
              (/XXX|OOO/g.test(board[2][0].join('') + board[1][1].join('') + board[0][2].join(''))))
 }
 
+// 1000 is the 1 secound.
 function sleep (milliseconds) {
     const date = Date.now();
     let currentDate = null;
