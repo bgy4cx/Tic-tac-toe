@@ -2,10 +2,6 @@ function guardians(P1, P2) {
     return (typeof P1 == 'string' && typeof P2 == 'string' && P1 != '' && P2 != '');
 }
 
-function ShowTheBoard(board) {
-    console.table(board);
-}
-
 // This function the positions of the free spaces. Odd vaule is row's number and the even vaule is the column's number.   
 function emptySpace(board) {
     output = [];
@@ -52,28 +48,38 @@ function TicTacToe (P1, P2) {
   }
   var TheBoard = [['', '', ''], ['', '', ''], ['', '', '']]; 
   P = P1;
+  // It goes while no winner or it has empty space. 
   while (emptySpace(TheBoard).length != 0 && !checkTheWin(TheBoard)) {
+      // Players have different signs. 
       if (P == P1) {
           sign = 'X';
       } else {
           sign = 'O';          
       }
+      // It counts the empty spaces. 
       let max = emptySpace(TheBoard).length / 2;
+      // It chooses an empty space.
       let nextStep = getRndInteger(max, 0);  
-     if (nextStep % 2 == 0) {
-        TheBoard[emptySpace(TheBoard)[nextStep]][emptySpace(TheBoard)[nextStep + 1]] = sign;
-     } else {
-        TheBoard[emptySpace(TheBoard)[nextStep - 1]][emptySpace(TheBoard)[nextStep]] = sign;
-     }
-     console.log('Player: ' + P);
-     ShowTheBoard(TheBoard);
-     sleep(2000);
-     if (P == P1) {
-         P = P2;
-     } else {
-         P = P1;
-     }
+      // It fill out the space.
+      if (nextStep % 2 == 0) {
+         TheBoard[emptySpace(TheBoard)[nextStep]][emptySpace(TheBoard)[nextStep + 1]] = sign;
+      } else {
+         TheBoard[emptySpace(TheBoard)[nextStep - 1]][emptySpace(TheBoard)[nextStep]] = sign;
+      }
+      // It shows the player name.
+      console.log('Player: ' + P);
+      // It shows the board.
+      console.table(TheBoard);
+      // It waits 2 minutes. 
+      sleep(2000);
+      // Other player is the next.
+      if (P == P1) {
+          P = P2;
+      } else {
+          P = P1;
+      }
   }
+  // If we have winner, it shows the player's name. 
     if (checkTheWin(TheBoard)) {
         if (P == P1) {
             P = P2;
@@ -86,4 +92,4 @@ function TicTacToe (P1, P2) {
   } 
 }
 
-module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep, getRndInteger};
+module.exports = {TicTacToe, guardians, emptySpace, checkTheWin, sleep, getRndInteger};

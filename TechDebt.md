@@ -15,3 +15,11 @@
 ## 4. part
 
 - It can check the winning state
+
+## 5. part
+
+- A sleep and the randomize functions were added.
+
+## 6. part
+
+- The code runs sucessfully. One function was removed and I use Console.table instead of that.
