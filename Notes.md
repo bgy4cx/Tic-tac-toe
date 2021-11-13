@@ -24,5 +24,5 @@ game ends with a draw.
 - The player has to put the sign on the board and it is possible only on the empty part.
 - The BOTs use random steps.
 - The waiting time is 2 secounds between the rounds.
-- The code has to finish the game when someone win.
-- The code has to finish the game when the board is full.
+- The code has to finish the game when someone win. ✅ 🍅 🍅 🍅 🍅
+- The code has to finish the game when the board is full. ✅ 🍅 🍅 🍅 🍅
