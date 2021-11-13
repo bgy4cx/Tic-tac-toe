@@ -3,14 +3,16 @@ function guardians (P1, P2) {
 }
 
 function ShowTheBoard(board) {
-  
+    console.table(board);
 }
 
 function TicTacToe (P1, P2) {
   if (!guardians(P1, P2)) {
     P1 = 'Player1';
     P2 = 'Player2';  
-  } 
+  }
+  var TheBoard = [['X', 'X', 'X'], ['O', 'O', 'O'], ['X', 'O', 'X']]; 
+  ShowTheBoard(TheBoard) 
 
 }
 
