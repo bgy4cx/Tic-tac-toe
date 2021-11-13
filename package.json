@@ -1,0 +1,22 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Exam task.",
+  "main": "TicTacToe.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgy4cx/Tic-tac-toe.git"
+  },
+  "author": "György Végh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgy4cx/Tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/bgy4cx/Tic-tac-toe#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
