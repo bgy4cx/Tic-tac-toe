@@ -19,3 +19,7 @@ test('Is there space?', () => {
     expect(emptySpace(TheBoard)).toStrictEqual([1,1]);
 });
 
+test('Have we winner?', () => {
+    expect(checkTheWin(TheBoard)).toBe(true);
+});
+
