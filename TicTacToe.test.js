@@ -1,4 +1,4 @@
-const {TicTacToe, guardians, ShowTheBoard} = require('./TicTacToe'); 
+const {TicTacToe, guardians, ShowTheBoard, emptySpace} = require('./TicTacToe'); 
 
 test('Are they strings?', () => {
   expect(guardians(12345,'Player1234')).toBe(false);
@@ -13,3 +13,9 @@ var TheBoard = [['X', 'X', 'X'], ['O', 'O', 'O'], ['X', 'O', 'X']];
 test('Is it in Console?', () => {
     expect(ShowTheBoard(TheBoard)).test;
 });
+
+var TheBoard = [['X', 'X', 'X'], ['O', '', 'O'], ['X', 'O', 'X']];
+test('Is there space?', () => {
+    expect(emptySpace(TheBoard)).toStrictEqual([1,1]);
+});
+

@@ -1,9 +1,13 @@
-function guardians (P1, P2) {
+function guardians(P1, P2) {
     return (typeof P1 == 'string' && typeof P2 == 'string' && P1 != '' && P2 != '');
 }
 
 function ShowTheBoard(board) {
     console.table(board);
+}
+
+function emptySpace(board) {
+
 }
 
 function TicTacToe (P1, P2) {
@@ -12,7 +16,7 @@ function TicTacToe (P1, P2) {
     P2 = 'Player2';  
   }
   var TheBoard = [['', '', ''], ['', '', ''], ['', '', '']]; 
-
+  
 }
 
-module.exports = {TicTacToe, guardians, ShowTheBoard};
+module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace};
