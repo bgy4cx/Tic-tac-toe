@@ -40,6 +40,7 @@ function sleep (milliseconds) {
     } while (currentDate - date < milliseconds);
 }
 
+// This function generates a number between the minimum and the maximum.
 function getRndInteger (max, min) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;    
 }
