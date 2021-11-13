@@ -32,7 +32,11 @@ function checkTheWin(board) {
 }
 
 function sleep (milliseconds) {
-
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
 }
 
 function TicTacToe (P1, P2) {
