@@ -14,7 +14,7 @@ game ends with a draw.
 
 ### Guardinas
 
-- The input has to be two strings like names.
+- The input has to be two strings like names. ☑️ 🍅
 - The input has to be noempty.	
 - The output is the player's move and the current state of the board on console.  
 - The the end-result has to be write out. 
