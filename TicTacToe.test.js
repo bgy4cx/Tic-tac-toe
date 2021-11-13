@@ -1,4 +1,4 @@
-const {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin} = require('./TicTacToe'); 
+const {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep} = require('./TicTacToe'); 
 
 test('Are they strings?', () => {
   expect(guardians(12345,'Player1234')).toBe(false);
@@ -21,5 +21,10 @@ test('Is there space?', () => {
 
 test('Have we winner?', () => {
     expect(checkTheWin(TheBoard)).toBe(true);
+});
+
+// We need 2 seconds dilay. 
+test('Is is waiting for 2 secounds?', () => {
+    expect(sleep(2000)).test;
 });
 

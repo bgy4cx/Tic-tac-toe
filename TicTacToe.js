@@ -31,6 +31,10 @@ function checkTheWin(board) {
              (/XXX|OOO/g.test(board[2][0].join('') + board[1][1].join('') + board[0][2].join(''))))
 }
 
+function sleep (milliseconds) {
+
+}
+
 function TicTacToe (P1, P2) {
   if (!guardians(P1, P2)) {
     P1 = 'Player1';
@@ -40,4 +44,4 @@ function TicTacToe (P1, P2) {
   
 }
 
-module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin};
+module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep};
