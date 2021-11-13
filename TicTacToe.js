@@ -51,7 +51,7 @@ function TicTacToe (P1, P2) {
     P2 = 'Player2';  
   }
   var TheBoard = [['', '', ''], ['', '', ''], ['', '', '']]; 
-  
+
 }
 
 module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep, getRndInteger};

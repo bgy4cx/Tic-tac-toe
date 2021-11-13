@@ -32,3 +32,8 @@ test('Random number.', () => {
     expect(getRndInteger(0,5)).toBeLessThanOrEqual(5);
 });
 
+// We should check the resoult on the console
+test('TicTacToe game', () => {
+    expect(TicTacToe('Hulk','Batman')).test;
+});
+
