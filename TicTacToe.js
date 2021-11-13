@@ -40,6 +40,10 @@ function sleep (milliseconds) {
     } while (currentDate - date < milliseconds);
 }
 
+function getRndInteger () {
+    
+}
+
 function TicTacToe (P1, P2) {
   if (!guardians(P1, P2)) {
     P1 = 'Player1';
@@ -49,4 +53,4 @@ function TicTacToe (P1, P2) {
   
 }
 
-module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep};
+module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep, getRndInteger};

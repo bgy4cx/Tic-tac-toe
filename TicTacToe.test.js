@@ -1,4 +1,4 @@
-const {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep} = require('./TicTacToe'); 
+const {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep, getRndInteger} = require('./TicTacToe'); 
 
 test('Are they strings?', () => {
   expect(guardians(12345,'Player1234')).toBe(false);
@@ -26,5 +26,9 @@ test('Have we winner?', () => {
 // We need 2 seconds dilay. 
 test('Is is waiting for 2 secounds?', () => {
     expect(sleep(2000)).test;
+});
+
+test('Random number.', () => {
+    expect(getRndInteger(0,5)).toBeLessThanOrEqual(5);
 });
 
