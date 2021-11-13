@@ -40,8 +40,8 @@ function sleep (milliseconds) {
     } while (currentDate - date < milliseconds);
 }
 
-function getRndInteger () {
-    
+function getRndInteger (max, min) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;    
 }
 
 function TicTacToe (P1, P2) {
