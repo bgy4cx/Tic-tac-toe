@@ -21,14 +21,14 @@ function emptySpace(board) {
 }
 
 function checkTheWin(board) {
-    return ((/XXX|OOO/g.test(board[0].join(''))) ||
-            (/XXX|OOO/g.test(board[1].join(''))) ||  
-            (/XXX|OOO/g.test(board[2].join(''))) ||
-            (/XXX|OOO/g.test(board[0][0].join('') + board[0][1].join('') + board[0][2].join(''))) ||
-            (/XXX|OOO/g.test(board[1][0].join('') + board[1][1].join('') + board[1][2].join(''))) ||
-            (/XXX|OOO/g.test(board[2][0].join('') + board[2][1].join('') + board[2][2].join(''))) ||
-            (/XXX|OOO/g.test(board[0][0].join('') + board[1][1].join('') + board[2][2].join(''))) ||
-             (/XXX|OOO/g.test(board[2][0].join('') + board[1][1].join('') + board[0][2].join(''))))
+    return ((/XXX|OOO/.test(board[0].join(''))) ||
+            (/XXX|OOO/.test(board[1].join(''))) ||  
+            (/XXX|OOO/.test(board[2].join(''))) ||
+            (/XXX|OOO/.test(board[0][0] + board[1][0] + board[2][0])) ||
+            (/XXX|OOO/.test(board[0][1] + board[1][1] + board[2][1])) ||
+            (/XXX|OOO/.test(board[0][2] + board[1][2] + board[2][2])) ||
+            (/XXX|OOO/.test(board[0][0] + board[1][1] + board[2][2])) ||
+            (/XXX|OOO/.test(board[2][0] + board[1][1] + board[0][2])) )
 }
 
 // 1000 is the 1 secound.
@@ -51,7 +51,39 @@ function TicTacToe (P1, P2) {
     P2 = 'Player2';  
   }
   var TheBoard = [['', '', ''], ['', '', ''], ['', '', '']]; 
-
+  P = P1;
+  while (emptySpace(TheBoard).length != 0 && !checkTheWin(TheBoard)) {
+      if (P == P1) {
+          sign = 'X';
+      } else {
+          sign = 'O';          
+      }
+      let max = emptySpace(TheBoard).length / 2;
+      let nextStep = getRndInteger(max, 0);  
+     if (nextStep % 2 == 0) {
+        TheBoard[emptySpace(TheBoard)[nextStep]][emptySpace(TheBoard)[nextStep + 1]] = sign;
+     } else {
+        TheBoard[emptySpace(TheBoard)[nextStep - 1]][emptySpace(TheBoard)[nextStep]] = sign;
+     }
+     console.log('Player: ' + P);
+     ShowTheBoard(TheBoard);
+     sleep(2000);
+     if (P == P1) {
+         P = P2;
+     } else {
+         P = P1;
+     }
+  }
+    if (checkTheWin(TheBoard)) {
+        if (P == P1) {
+            P = P2;
+        } else {
+            P = P1;
+        }
+        console.log('The winner: ' + P);
+  } else if (emptySpace(TheBoard).length == 0) {
+        console.log('GAME ENDS WITH A DRAW!')
+  } 
 }
 
 module.exports = {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin, sleep, getRndInteger};

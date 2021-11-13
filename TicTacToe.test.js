@@ -10,11 +10,11 @@ test('Are they not empty?', () => {
 
 //ShowTheBoard was checked on the console.
 var TheBoard = [['X', 'X', 'X'], ['O', 'O', 'O'], ['X', 'O', 'X']];
-test('Is it in Console?', () => {
+/* test('Is it in Console?', () => {
     expect(ShowTheBoard(TheBoard)).test;
-});
+}); */
 
-var TheBoard = [['X', 'X', 'X'], ['O', '', 'O'], ['X', 'O', 'X']];
+TheBoard = [['X', 'X', 'X'], ['O', '', 'O'], ['X', 'O', 'X']];
 test('Is there space?', () => {
     expect(emptySpace(TheBoard)).toStrictEqual([1,1]);
 });
