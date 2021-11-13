@@ -1,4 +1,4 @@
-const {TicTacToe, guardians, ShowTheBoard, emptySpace} = require('./TicTacToe'); 
+const {TicTacToe, guardians, ShowTheBoard, emptySpace, checkTheWin} = require('./TicTacToe'); 
 
 test('Are they strings?', () => {
   expect(guardians(12345,'Player1234')).toBe(false);

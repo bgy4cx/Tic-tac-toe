@@ -21,6 +21,18 @@ function emptySpace(board) {
 }
 
 function checkTheWin(board) {
+    if ((/XXX|OOO/g.test(board[0].join(''))) ||
+        (/XXX|OOO/g.test(board[1].join(''))) ||  
+        (/XXX|OOO/g.test(board[2].join(''))) ||
+        (/XXX|OOO/g.test(board[0][0].join('') + board[0][1].join('') + board[0][2].join(''))) ||
+        (/XXX|OOO/g.test(board[1][0].join('') + board[1][1].join('') + board[1][2].join(''))) ||
+        (/XXX|OOO/g.test(board[2][0].join('') + board[2][1].join('') + board[2][2].join(''))) ||
+        (/XXX|OOO/g.test(board[0][0].join('') + board[1][1].join('') + board[2][2].join(''))) ||
+        (/XXX|OOO/g.test(board[2][0].join('') + board[1][1].join('') + board[0][2].join('')))
+        )
+    {
+        return true;
+    } else return false;
 
 }
 
